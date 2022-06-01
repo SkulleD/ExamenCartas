@@ -123,6 +123,7 @@
             this.carta3.TabIndex = 2;
             this.carta3.Valor = 0;
             this.carta3.AlcanzaMax += new System.EventHandler(this.carta1_AlcanzaMax);
+            this.carta3.DobleClick += new System.EventHandler(this.carta1_DobleClick);
             // 
             // carta2
             // 
@@ -134,6 +135,7 @@
             this.carta2.TabIndex = 1;
             this.carta2.Valor = 0;
             this.carta2.AlcanzaMax += new System.EventHandler(this.carta1_AlcanzaMax);
+            this.carta2.DobleClick += new System.EventHandler(this.carta1_DobleClick);
             // 
             // carta1
             // 
@@ -143,8 +145,9 @@
             this.carta1.Nivel = 1;
             this.carta1.Size = new System.Drawing.Size(150, 150);
             this.carta1.TabIndex = 0;
-            this.carta1.Valor = 0;
+            this.carta1.Valor = 100;
             this.carta1.AlcanzaMax += new System.EventHandler(this.carta1_AlcanzaMax);
+            this.carta1.DobleClick += new System.EventHandler(this.carta1_DobleClick);
             // 
             // Form1
             // 

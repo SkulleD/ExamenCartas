@@ -69,12 +69,12 @@ namespace ExamenCartas
             {
                 if (value > 100)
                 {
+                    valor = 100;
+
                     if (Enabled) // El evento solo se lanza si el compomente está habilitado.
                     {
                         AlcanzaMax?.Invoke(this, new EventArgs());
                     }
-
-                    valor = 0;
                     //if (AlcanzaMax != null)
                     //{
                     //    AlcanzaMax(this, new EventArgs()); // La otra manera de llamar al evento.
@@ -102,9 +102,14 @@ namespace ExamenCartas
         [Description("Se lanza cuando la experiencia de una carta llegue al máximo")]
         public event EventHandler AlcanzaMax;
 
-        private void lbl_DoubleClick(object sender, EventArgs e)
+        [Category("Examen")]
+        [Description("Se lanza cuando se hace doble click en la etiqueta del nivel")]
+        public event EventHandler DobleClick;
+
+        protected override void OnDoubleClick(EventArgs e)
         {
-            lbl.Text = "aaaa";
+            base.OnDoubleClick(e);
+            DobleClick?.Invoke(this, new EventArgs());
         }
 
         protected override void OnPaint(PaintEventArgs e)

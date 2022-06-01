@@ -55,7 +55,6 @@
             this.lbl.Size = new System.Drawing.Size(17, 17);
             this.lbl.TabIndex = 1;
             this.lbl.Text = "0";
-            this.lbl.DoubleClick += new System.EventHandler(this.lbl_DoubleClick);
             // 
             // Carta
             // 
@@ -64,7 +63,6 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.pb);
             this.Name = "Carta";
-            this.DoubleClick += new System.EventHandler(this.lbl_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

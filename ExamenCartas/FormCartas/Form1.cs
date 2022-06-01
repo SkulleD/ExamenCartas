@@ -87,9 +87,10 @@ namespace FormCartas
             carta.Nivel++;
         }
 
-        private void carta1_DoubleClick(object sender, EventArgs e)
+        private void carta1_DobleClick(object sender, EventArgs e)
         {
-            Text = "aaaa";
+            lblResult.Text = "bbb";
+            Text = "TITULO";
         }
     }
 }
